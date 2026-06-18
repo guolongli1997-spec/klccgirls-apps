@@ -4,17 +4,17 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 
-:root {
-	--accent: #2337ff;
-	--accent-dark: #000d8a;
-	--black: 15, 18, 25;
-	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
-	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
+:Root{
+	--accent: #ff0000;
+	--accent-dark: #cc0000;
+	--black: 255, 255, 255;
+	--gray: 200, 200, 200;
+	--gray-light: 50, 50, 50;
+	--gray-dark: 255, 255, 255;
+	--gray-gradient: rgba(0, 0, 0, 50%), #000;
 	--box-shadow:
-		0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-		0 16px 32px rgba(var(--gray), 33%);
+		0 2px 6px rgba(255, 255, 255, 10%), 0 8px 24px rgba(255, 255, 255, 15%),
+		0 16px 32px rgba(255, 255, 255, 15%);
 }
 @font-face {
 	font-family: "Atkinson";
@@ -35,11 +35,11 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
+	background: #000000;
 	background-size: 100% 600px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
+	color: rgb(255, 255, 255);
 	font-size: 20px;
 	line-height: 1.7;
 }
@@ -56,7 +56,7 @@ h4,
 h5,
 h6 {
 	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
+	color: rgb(255, 255, 255);
 	line-height: 1.2;
 }
 h1 {
@@ -79,10 +79,10 @@ b {
 	font-weight: 700;
 }
 a {
-	color: var(--accent);
+	color: #ff0000;
 }
 a:hover {
-	color: var(--accent);
+	color: #cc0000;
 }
 p {
 	margin-bottom: 1em;
@@ -93,12 +93,19 @@ p {
 textarea {
 	width: 100%;
 	font-size: 16px;
+	background: #1a1a1a;
+	color: #ffffff;
+	border: 1px solid #333333;
 }
 input {
 	font-size: 16px;
+	background: #1a1a1a;
+	color: #ffffff;
+	border: 1px solid #333333;
 }
 table {
 	width: 100%;
+	color: #ffffff;
 }
 img {
 	max-width: 100%;
@@ -107,25 +114,29 @@ img {
 }
 code {
 	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
+	background-color: #1a1a1a;
 	border-radius: 2px;
+	color: #ff0000;
 }
 pre {
 	padding: 1.5em;
 	border-radius: 8px;
+	background: #1a1a1a;
 }
 pre > code {
 	all: unset;
+	color: #ffffff;
 }
 blockquote {
-	border-left: 4px solid var(--accent);
+	border-left: 4px solid #ff0000;
 	padding: 0 0 0 20px;
 	margin: 0px;
 	font-size: 1.333em;
+	color: #ffffff;
 }
 hr {
 	border: none;
-	border-top: 1px solid rgb(var(--gray-light));
+	border-top: 1px solid #333333;
 }
 @media (max-width: 720px) {
 	body {
@@ -144,12 +155,8 @@ hr {
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
-	/* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
 	clip: rect(1px 1px 1px 1px);
-	/* maybe deprecated but we need to support legacy browsers */
 	clip: rect(1px, 1px, 1px, 1px);
-	/* modern browsers, clip-path works inwards from each corner */
 	clip-path: inset(50%);
-	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
 }
